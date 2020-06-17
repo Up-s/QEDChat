@@ -3,27 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315A67F36578E1CEB711F854 /* Pods_QEDChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */; };
 		4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA272499CC0800F69439 /* AppDelegate.swift */; };
-		4FE0BA2A2499CC0800F69439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA292499CC0800F69439 /* SceneDelegate.swift */; };
-		4FE0BA2C2499CC0800F69439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA2B2499CC0800F69439 /* ViewController.swift */; };
 		4FE0BA2F2499CC0800F69439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA2D2499CC0800F69439 /* Main.storyboard */; };
 		4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA302499CC0900F69439 /* Assets.xcassets */; };
 		4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */; };
+		4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */; };
+		4FFD2F722499D0BD008554D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F712499D0BD008554D7 /* SignInViewController.swift */; };
+		4FFD2F742499D0C4008554D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */; };
+		4FFD2F762499D111008554D7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F752499D111008554D7 /* SignInView.swift */; };
+		4FFFF9EF2499E21C00A78720 /* SignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9EE2499E21C00A78720 /* SignInProvider.swift */; };
+		4FFFF9F22499E46D00A78720 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F12499E46D00A78720 /* ExtensionUIViewController.swift */; };
+		4FFFF9F42499E63000A78720 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F32499E63000A78720 /* FirebaseReference.swift */; };
+		4FFFF9F72499E6B400A78720 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F62499E6B400A78720 /* UserModel.swift */; };
+		4FFFF9FA2499ED9D00A78720 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F92499ED9D00A78720 /* WindowManager.swift */; };
+		4FFFF9FE2499EF0E00A78720 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */; };
+		4FFFFA002499EF2C00A78720 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */; };
+		4FFFFA022499EF3200A78720 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA012499EF3200A78720 /* MyViewController.swift */; };
+		4FFFFA042499F16300A78720 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA032499F16300A78720 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QEDChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D7DEF35DCF40537BA67D29 /* Pods-QEDChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QEDChat.debug.xcconfig"; path = "Target Support Files/Pods-QEDChat/Pods-QEDChat.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE0BA242499CC0800F69439 /* QEDChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QEDChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE0BA272499CC0800F69439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FE0BA292499CC0800F69439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4FE0BA2B2499CC0800F69439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FE0BA2E2499CC0800F69439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FE0BA302499CC0900F69439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE0BA332499CC0900F69439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE0BA352499CC0900F69439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FFD2F712499D0BD008554D7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4FFD2F752499D111008554D7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		4FFFF9EE2499E21C00A78720 /* SignInProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProvider.swift; sourceTree = "<group>"; };
+		4FFFF9F12499E46D00A78720 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
+		4FFFF9F32499E63000A78720 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		4FFFF9F62499E6B400A78720 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4FFFF9F92499ED9D00A78720 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		4FFFFA012499EF3200A78720 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		4FFFFA032499F16300A78720 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B768B444468861A94221FB7B /* Pods-QEDChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QEDChat.release.xcconfig"; path = "Target Support Files/Pods-QEDChat/Pods-QEDChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315A67F36578E1CEB711F854 /* Pods_QEDChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007B09C48C597C349B90F2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17D7DEF35DCF40537BA67D29 /* Pods-QEDChat.debug.xcconfig */,
+				B768B444468861A94221FB7B /* Pods-QEDChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49C7EC8F121AC9C060972700 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4FE0BA1B2499CC0800F69439 = {
 			isa = PBXGroup;
 			children = (
 				4FE0BA262499CC0800F69439 /* QEDChat */,
 				4FE0BA252499CC0800F69439 /* Products */,
+				007B09C48C597C349B90F2A7 /* Pods */,
+				49C7EC8F121AC9C060972700 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +103,73 @@
 			isa = PBXGroup;
 			children = (
 				4FE0BA272499CC0800F69439 /* AppDelegate.swift */,
-				4FE0BA292499CC0800F69439 /* SceneDelegate.swift */,
-				4FE0BA2B2499CC0800F69439 /* ViewController.swift */,
-				4FE0BA2D2499CC0800F69439 /* Main.storyboard */,
+				4FFD2F782499D11F008554D7 /* Controller */,
+				4FFD2F772499D114008554D7 /* View */,
+				4FFFF9F82499ED9200A78720 /* Manager */,
+				4FFFF9F52499E6A300A78720 /* Model */,
+				4FFFF9ED2499DF0300A78720 /* Network */,
+				4FFFF9F02499E45A00A78720 /* Extension */,
 				4FE0BA302499CC0900F69439 /* Assets.xcassets */,
+				4FE0BA2D2499CC0800F69439 /* Main.storyboard */,
 				4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */,
 				4FE0BA352499CC0900F69439 /* Info.plist */,
+				4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */,
 			);
 			path = QEDChat;
+			sourceTree = "<group>";
+		};
+		4FFD2F772499D114008554D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD2F752499D111008554D7 /* SignInView.swift */,
+				4FFFFA032499F16300A78720 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FFD2F782499D11F008554D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD2F712499D0BD008554D7 /* SignInViewController.swift */,
+				4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */,
+				4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */,
+				4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */,
+				4FFFFA012499EF3200A78720 /* MyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4FFFF9ED2499DF0300A78720 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4FFFF9F32499E63000A78720 /* FirebaseReference.swift */,
+				4FFFF9EE2499E21C00A78720 /* SignInProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4FFFF9F02499E45A00A78720 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4FFFF9F12499E46D00A78720 /* ExtensionUIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4FFFF9F52499E6A300A78720 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FFFF9F62499E6B400A78720 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4FFFF9F82499ED9200A78720 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4FFFF9F92499ED9D00A78720 /* WindowManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FE0BA382499CC0900F69439 /* Build configuration list for PBXNativeTarget "QEDChat" */;
 			buildPhases = (
+				53EBB8A5B2182FC80348172D /* [CP] Check Pods Manifest.lock */,
 				4FE0BA202499CC0800F69439 /* Sources */,
 				4FE0BA212499CC0800F69439 /* Frameworks */,
 				4FE0BA222499CC0800F69439 /* Resources */,
+				6985C01646D2599820771D30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */,
+				4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */,
 				4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */,
 				4FE0BA2F2499CC0800F69439 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +241,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53EBB8A5B2182FC80348172D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QEDChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6985C01646D2599820771D30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QEDChat/Pods-QEDChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QEDChat/Pods-QEDChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QEDChat/Pods-QEDChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FE0BA202499CC0800F69439 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE0BA2C2499CC0800F69439 /* ViewController.swift in Sources */,
+				4FFFF9F22499E46D00A78720 /* ExtensionUIViewController.swift in Sources */,
 				4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */,
-				4FE0BA2A2499CC0800F69439 /* SceneDelegate.swift in Sources */,
+				4FFFF9FE2499EF0E00A78720 /* MainTabBarController.swift in Sources */,
+				4FFFF9F72499E6B400A78720 /* UserModel.swift in Sources */,
+				4FFFFA002499EF2C00A78720 /* ChatListViewController.swift in Sources */,
+				4FFFF9F42499E63000A78720 /* FirebaseReference.swift in Sources */,
+				4FFD2F742499D0C4008554D7 /* SignUpViewController.swift in Sources */,
+				4FFFF9FA2499ED9D00A78720 /* WindowManager.swift in Sources */,
+				4FFFFA042499F16300A78720 /* SignUpView.swift in Sources */,
+				4FFD2F722499D0BD008554D7 /* SignInViewController.swift in Sources */,
+				4FFFF9EF2499E21C00A78720 /* SignInProvider.swift in Sources */,
+				4FFFFA022499EF3200A78720 /* MyViewController.swift in Sources */,
+				4FFD2F762499D111008554D7 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +442,13 @@
 		};
 		4FE0BA392499CC0900F69439 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D7DEF35DCF40537BA67D29 /* Pods-QEDChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLN97H98PA;
 				INFOPLIST_FILE = QEDChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +462,13 @@
 		};
 		4FE0BA3A2499CC0900F69439 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B768B444468861A94221FB7B /* Pods-QEDChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLN97H98PA;
 				INFOPLIST_FILE = QEDChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
