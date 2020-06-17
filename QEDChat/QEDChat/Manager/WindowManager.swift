@@ -11,12 +11,12 @@ import UIKit
 final class WindowManager {
   enum VisibleViewControllerType {
     case sign
-    case main
+    case chat
     
     var controller: UIViewController {
       switch self {
       case .sign:     return SignInViewController()
-      case .main:     return MainTabBarController()
+      case .chat:     return ChatViewController()
       }
     }
   }
@@ -25,7 +25,6 @@ final class WindowManager {
     guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return }
     
     let window = UIWindow(frame: UIScreen.main.bounds)
-    window.backgroundColor = .systemBackground
     window.rootViewController = type.controller
     window.makeKeyAndVisible()
     

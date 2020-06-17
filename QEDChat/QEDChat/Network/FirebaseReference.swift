@@ -10,9 +10,17 @@ import Foundation
 
 struct FirebaseReference {
   static let user = "User"
+  static let chat = "Chat"
+  static let message = "Message"
 }
 
 enum FirebaseError: Error {
   case firebase(Error)
   case notice(String)
+}
+
+
+struct ChatReference {
+  static let name = "Name"
+  static let users = "Users"
 }

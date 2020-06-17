@@ -77,7 +77,7 @@ extension SignInViewController: SignInViewDelegate {
         self.alertNormal(title: "경고", message: notice)
         
       case .success:
-        WindowManager.set(.main)
+        WindowManager.set(.chat)
       }
     }
   }

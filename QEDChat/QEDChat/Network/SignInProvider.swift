@@ -15,17 +15,14 @@ class SignProvider {
   let auth = Auth.auth()
   
   func signIn(email: String, password: String, completion: @escaping (Result<String, FirebaseError>) -> Void) {
-    auth.signIn(withEmail: email, password: password) { [weak self] (result, error) in
+    auth.signIn(withEmail: email, password: password) { (result, error) in
       if let error = error {
         completion(.failure(.firebase(error)))
         
       } else {
-        guard
-          let self = self,
-          let user = result?.user
-          else {
-            completion(.failure(.notice("Parsing Error")))
-            return
+        guard let user = result?.user else {
+          completion(.failure(.notice("Result Nill")))
+          return
         }
         
         self.firestore
@@ -55,18 +52,16 @@ class SignProvider {
   }
   
   
+  
   func signUp(email: String, password: String, nickName: String, completion: @escaping (Result<String, FirebaseError>) -> Void) {
-    auth.createUser(withEmail: email, password: password) { [weak self] (result, error) in
+    auth.createUser(withEmail: email, password: password) { (result, error) in
       if let error = error {
         completion(.failure(.firebase(error)))
         
       } else {
-        guard
-          let self = self,
-          let user = result?.user
-          else {
-            completion(.failure(.notice("Parsing Error")))
-            return
+        guard let user = result?.user else {
+          completion(.failure(.notice("Result Nill")))
+          return
         }
         
         self.firestore
@@ -78,7 +73,7 @@ class SignProvider {
           ]) { (error) in
             if let error = error {
               completion(.failure(.firebase(error)))
-
+              
             } else {
               completion(.success("Success"))
             }

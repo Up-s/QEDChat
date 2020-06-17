@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     Auth.auth().currentUser == nil ?
       WindowManager.set(.sign) :
-      WindowManager.set(.main)
+      WindowManager.set(.chat)
     
     return true
   }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		315A67F36578E1CEB711F854 /* Pods_QEDChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */; };
 		4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA272499CC0800F69439 /* AppDelegate.swift */; };
-		4FE0BA2F2499CC0800F69439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA2D2499CC0800F69439 /* Main.storyboard */; };
 		4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA302499CC0900F69439 /* Assets.xcassets */; };
 		4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */; };
 		4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */; };
@@ -21,10 +20,10 @@
 		4FFFF9F42499E63000A78720 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F32499E63000A78720 /* FirebaseReference.swift */; };
 		4FFFF9F72499E6B400A78720 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F62499E6B400A78720 /* UserModel.swift */; };
 		4FFFF9FA2499ED9D00A78720 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9F92499ED9D00A78720 /* WindowManager.swift */; };
-		4FFFF9FE2499EF0E00A78720 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */; };
-		4FFFFA002499EF2C00A78720 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */; };
-		4FFFFA022499EF3200A78720 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA012499EF3200A78720 /* MyViewController.swift */; };
+		4FFFFA002499EF2C00A78720 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF9FF2499EF2C00A78720 /* ChatViewController.swift */; };
 		4FFFFA042499F16300A78720 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA032499F16300A78720 /* SignUpView.swift */; };
+		4FFFFA062499FC7600A78720 /* ChatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA052499FC7600A78720 /* ChatProvider.swift */; };
+		4FFFFA082499FD6B00A78720 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFA072499FD6B00A78720 /* MessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		17D7DEF35DCF40537BA67D29 /* Pods-QEDChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QEDChat.debug.xcconfig"; path = "Target Support Files/Pods-QEDChat/Pods-QEDChat.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE0BA242499CC0800F69439 /* QEDChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QEDChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE0BA272499CC0800F69439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FE0BA2E2499CC0800F69439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FE0BA302499CC0900F69439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE0BA332499CC0900F69439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE0BA352499CC0900F69439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,10 +43,10 @@
 		4FFFF9F32499E63000A78720 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		4FFFF9F62499E6B400A78720 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4FFFF9F92499ED9D00A78720 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
-		4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
-		4FFFFA012499EF3200A78720 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		4FFFF9FF2499EF2C00A78720 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4FFFFA032499F16300A78720 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4FFFFA052499FC7600A78720 /* ChatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProvider.swift; sourceTree = "<group>"; };
+		4FFFFA072499FD6B00A78720 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		B768B444468861A94221FB7B /* Pods-QEDChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QEDChat.release.xcconfig"; path = "Target Support Files/Pods-QEDChat/Pods-QEDChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +108,6 @@
 				4FFFF9ED2499DF0300A78720 /* Network */,
 				4FFFF9F02499E45A00A78720 /* Extension */,
 				4FE0BA302499CC0900F69439 /* Assets.xcassets */,
-				4FE0BA2D2499CC0800F69439 /* Main.storyboard */,
 				4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */,
 				4FE0BA352499CC0900F69439 /* Info.plist */,
 				4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */,
@@ -132,9 +129,7 @@
 			children = (
 				4FFD2F712499D0BD008554D7 /* SignInViewController.swift */,
 				4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */,
-				4FFFF9FD2499EF0E00A78720 /* MainTabBarController.swift */,
-				4FFFF9FF2499EF2C00A78720 /* ChatListViewController.swift */,
-				4FFFFA012499EF3200A78720 /* MyViewController.swift */,
+				4FFFF9FF2499EF2C00A78720 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +139,7 @@
 			children = (
 				4FFFF9F32499E63000A78720 /* FirebaseReference.swift */,
 				4FFFF9EE2499E21C00A78720 /* SignInProvider.swift */,
+				4FFFFA052499FC7600A78720 /* ChatProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFFF9F62499E6B400A78720 /* UserModel.swift */,
+				4FFFFA072499FD6B00A78720 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,7 +232,6 @@
 				4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */,
 				4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */,
 				4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */,
-				4FE0BA2F2499CC0800F69439 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,18 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFFFA062499FC7600A78720 /* ChatProvider.swift in Sources */,
 				4FFFF9F22499E46D00A78720 /* ExtensionUIViewController.swift in Sources */,
 				4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */,
-				4FFFF9FE2499EF0E00A78720 /* MainTabBarController.swift in Sources */,
 				4FFFF9F72499E6B400A78720 /* UserModel.swift in Sources */,
-				4FFFFA002499EF2C00A78720 /* ChatListViewController.swift in Sources */,
+				4FFFFA002499EF2C00A78720 /* ChatViewController.swift in Sources */,
 				4FFFF9F42499E63000A78720 /* FirebaseReference.swift in Sources */,
 				4FFD2F742499D0C4008554D7 /* SignUpViewController.swift in Sources */,
 				4FFFF9FA2499ED9D00A78720 /* WindowManager.swift in Sources */,
 				4FFFFA042499F16300A78720 /* SignUpView.swift in Sources */,
+				4FFFFA082499FD6B00A78720 /* MessageModel.swift in Sources */,
 				4FFD2F722499D0BD008554D7 /* SignInViewController.swift in Sources */,
 				4FFFF9EF2499E21C00A78720 /* SignInProvider.swift in Sources */,
-				4FFFFA022499EF3200A78720 /* MyViewController.swift in Sources */,
 				4FFD2F762499D111008554D7 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +303,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4FE0BA2D2499CC0800F69439 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4FE0BA2E2499CC0800F69439 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
