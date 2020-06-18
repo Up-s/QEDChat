@@ -16,7 +16,7 @@ final class WindowManager {
     var controller: UIViewController {
       switch self {
       case .sign:     return SignInViewController()
-      case .chat:     return ChatViewController()
+      case .chat:     return UINavigationController(rootViewController: ChatViewController())
       }
     }
   }

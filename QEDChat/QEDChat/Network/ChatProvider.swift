@@ -18,6 +18,9 @@ class ChatProvider {
   
   var messages: [MessageModel] { _messages }
   
+  
+  
+  
   func addListener(completion: @escaping (Result<String, FirebaseError>) -> Void) {
     listener = firestore
       .collection(FirebaseReference.chat)
@@ -61,6 +64,8 @@ class ChatProvider {
     }
   }
   
+  
+  
   func addMessage(content: String?) {
     guard
       let nickName = UserDefaults.standard.string(forKey: UserReference.nickName),
@@ -74,6 +79,12 @@ class ChatProvider {
         MessageReference.content: content,
         MessageReference.date: Timestamp()
       ])
+  }
+  
+  
+  
+  func out() {
+    listener?.remove()
   }
 }
 

@@ -18,9 +18,3 @@ enum FirebaseError: Error {
   case firebase(Error)
   case notice(String)
 }
-
-
-struct ChatReference {
-  static let name = "Name"
-  static let users = "Users"
-}

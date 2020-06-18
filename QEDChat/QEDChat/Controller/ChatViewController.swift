@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setNavination()
     setUI()
     setConstraint()
     setKeyboardNotification()
@@ -48,6 +49,23 @@ class ChatViewController: UIViewController {
 // MARK: - UI
 
 extension ChatViewController {
+  private func setNavination() {
+    navigationController?.title = "Chat"
+    let signOutBarButton = UIBarButtonItem(title: "종료", style: .done, target: self, action: #selector(signOutBarButtonDidTap))
+    navigationItem.leftBarButtonItem = signOutBarButton
+  }
+  
+  @objc private func signOutBarButtonDidTap() {
+    switch SignProvider().signOut() {
+    case .failure(let error):
+      alertNormal(title: error.localizedDescription)
+      
+    case .success:
+      pChat.out()
+      WindowManager.set(.sign)
+    }
+  }
+  
   private func setUI() {
     view.backgroundColor = .systemBackground
     

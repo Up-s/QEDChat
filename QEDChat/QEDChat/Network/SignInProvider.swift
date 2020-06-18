@@ -81,5 +81,17 @@ class SignProvider {
       }
     }
   }
+  
+  
+  
+  func signOut() -> Result<String, Error> {
+    do {
+      try auth.signOut()
+      return .success("Success")
+      
+    } catch {
+      return .failure(error)
+    }
+  }
 }
 
