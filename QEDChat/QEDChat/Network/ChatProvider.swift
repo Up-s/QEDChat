@@ -20,7 +20,6 @@ class ChatProvider {
   
   
   
-  
   func addListener(completion: @escaping (Result<String, FirebaseError>) -> Void) {
     listener = firestore
       .collection(FirebaseReference.chat)

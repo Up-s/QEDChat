@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		315A67F36578E1CEB711F854 /* Pods_QEDChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */; };
+		4F5DBB6524B458BB00A196A2 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5DBB6424B458BB00A196A2 /* IndicatorViewController.swift */; };
 		4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA272499CC0800F69439 /* AppDelegate.swift */; };
 		4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA302499CC0900F69439 /* Assets.xcassets */; };
 		4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1704C8AC8A1E7C9173FAA019 /* Pods_QEDChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QEDChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D7DEF35DCF40537BA67D29 /* Pods-QEDChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QEDChat.debug.xcconfig"; path = "Target Support Files/Pods-QEDChat/Pods-QEDChat.debug.xcconfig"; sourceTree = "<group>"; };
+		4F5DBB6424B458BB00A196A2 /* IndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		4FE0BA242499CC0800F69439 /* QEDChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QEDChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE0BA272499CC0800F69439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FE0BA302499CC0900F69439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F5DBB6624B458FA00A196A2 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				4F5DBB6424B458BB00A196A2 /* IndicatorViewController.swift */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
 		4FE0BA1B2499CC0800F69439 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE0BA272499CC0800F69439 /* AppDelegate.swift */,
+				4F5DBB6624B458FA00A196A2 /* Utill */,
 				4FFD2F782499D11F008554D7 /* Controller */,
 				4FFD2F772499D114008554D7 /* View */,
 				4FFFF9F82499ED9200A78720 /* Manager */,
@@ -292,6 +303,7 @@
 				4FFFF9F42499E63000A78720 /* FirebaseReference.swift in Sources */,
 				4FFD2F742499D0C4008554D7 /* SignUpViewController.swift in Sources */,
 				4FFFF9FA2499ED9D00A78720 /* WindowManager.swift in Sources */,
+				4F5DBB6524B458BB00A196A2 /* IndicatorViewController.swift in Sources */,
 				4FFFFA042499F16300A78720 /* SignUpView.swift in Sources */,
 				4FFFFA082499FD6B00A78720 /* MessageModel.swift in Sources */,
 				4FFD2F722499D0BD008554D7 /* SignInViewController.swift in Sources */,

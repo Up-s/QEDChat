@@ -44,6 +44,7 @@ class SignProvider {
               
               UserDefaults.standard.set(email, forKey: UserReference.email)
               UserDefaults.standard.set(nickName, forKey: UserReference.nickName)
+              
               completion(.success("Success"))
             }
         }
@@ -84,14 +85,8 @@ class SignProvider {
   
   
   
-  func signOut() -> Result<String, Error> {
-    do {
-      try auth.signOut()
-      return .success("Success")
-      
-    } catch {
-      return .failure(error)
-    }
+  func signOut() throws {
+    try auth.signOut()
   }
 }
 

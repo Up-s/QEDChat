@@ -11,8 +11,9 @@ import UIKit
 class ChatViewController: UIViewController {
   
   private let pChat = ChatProvider()
+  private let pSign = SignProvider()
   
-  private let tableView = UITableView()
+  private let messageTableView = UITableView()
   private let messageTextField = UITextField()
   
   private var bottomViewConstraint: NSLayoutConstraint?
@@ -37,7 +38,7 @@ class ChatViewController: UIViewController {
         self.alertNormal(title: notice)
         
       case .success:
-        self.tableView.reloadData()
+        self.messageTableView.reloadData()
         self.tableViewBottomScroll()
       }
     }
@@ -56,21 +57,21 @@ extension ChatViewController {
   }
   
   @objc private func signOutBarButtonDidTap() {
-    switch SignProvider().signOut() {
-    case .failure(let error):
-      alertNormal(title: error.localizedDescription)
-      
-    case .success:
+    do {
+      try pSign.signOut()
       pChat.out()
       WindowManager.set(.sign)
+      
+    } catch {
+      alertNormal(title: error.localizedDescription)
     }
   }
   
   private func setUI() {
     view.backgroundColor = .systemBackground
     
-    tableView.keyboardDismissMode = .onDrag
-    tableView.dataSource = self
+    messageTableView.keyboardDismissMode = .onDrag
+    messageTableView.dataSource = self
     
     messageTextField.font = UIFont.systemFont(ofSize: 35)
     messageTextField.backgroundColor = .red
@@ -80,7 +81,7 @@ extension ChatViewController {
   private func setConstraint() {
     let guide = view.safeAreaLayoutGuide
     
-    [tableView, messageTextField].forEach {
+    [messageTableView, messageTextField].forEach {
       view.addSubview($0)
       $0.translatesAutoresizingMaskIntoConstraints = false
       $0.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
@@ -88,8 +89,8 @@ extension ChatViewController {
     }
     
     NSLayoutConstraint.activate([
-      tableView.topAnchor.constraint(equalTo: guide.topAnchor),
-      messageTextField.topAnchor.constraint(equalTo: tableView.bottomAnchor)
+      messageTableView.topAnchor.constraint(equalTo: guide.topAnchor),
+      messageTextField.topAnchor.constraint(equalTo: messageTableView.bottomAnchor)
     ])
     
     bottomViewConstraint = messageTextField.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
@@ -98,7 +99,7 @@ extension ChatViewController {
   
   private func tableViewBottomScroll() {
     guard !pChat.messages.isEmpty else { return }
-    tableView.scrollToRow(at: (IndexPath(row: self.pChat.messages.count - 1, section: 0)), at: .bottom, animated: true)
+    messageTableView.scrollToRow(at: (IndexPath(row: self.pChat.messages.count - 1, section: 0)), at: .bottom, animated: true)
   }
 }
 
@@ -114,8 +115,8 @@ extension ChatViewController {
   
   @objc private func keyboardNotificationAction(_ notification: Notification) {
     guard
-      let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
-      let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+      let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+      let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
       let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
       else { return }
     let height = keyboardFrame.cgRectValue.height - view.safeAreaInsets.bottom
