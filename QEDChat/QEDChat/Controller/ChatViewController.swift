@@ -29,7 +29,9 @@ class ChatViewController: UIViewController {
   }
   
   private func setNetwork() {
-    pChat.addListener { (result) in
+    pChat.addListener { [weak self] (result) in
+      guard let self = self else { return }
+      
       switch result {
       case .failure(.firebase(let error)):
         self.alertNormal(title: "네트워크 에러", message: error.localizedDescription)
@@ -170,7 +172,8 @@ extension ChatViewController: UITableViewDataSource {
 
 extension ChatViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    pChat.addMessage(content: textField.text)
+    guard let content = textField.text, !content.isEmpty else { return false }
+    pChat.addMessage(content: content)
     textField.text = nil
     return true
   }

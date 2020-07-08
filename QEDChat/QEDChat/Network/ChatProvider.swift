@@ -12,9 +12,10 @@ import Firebase
 class ChatProvider {
   
   private var listener: ListenerRegistration?
-  
   private let firestore = Firestore.firestore()
   private var _messages = [MessageModel]()
+  
+  
   
   var messages: [MessageModel] { _messages }
   
@@ -23,14 +24,20 @@ class ChatProvider {
   func addListener(completion: @escaping (Result<String, FirebaseError>) -> Void) {
     listener = firestore
       .collection(FirebaseReference.chat)
-      .addSnapshotListener { (snapshot, error) in
+      .addSnapshotListener { [weak self] (snapshot, error) in
+        
+        print("\n---------------------- [ ChatProvider addListener ] ----------------------")
+        
         if let error = error {
           completion(.failure(.firebase(error)))
           
         } else {
-          guard let documents = snapshot?.documents else {
-            completion(.failure(.notice("Snapshot Error")))
-            return
+          guard
+            let self = self,
+            let documents = snapshot?.documents
+            else {
+              completion(.failure(.notice("Snapshot Error")))
+              return
           }
           
           var tempMessages = [MessageModel]()
@@ -65,11 +72,8 @@ class ChatProvider {
   
   
   
-  func addMessage(content: String?) {
-    guard
-      let nickName = UserDefaults.standard.string(forKey: UserReference.nickName),
-      let content = content
-      else { return }
+  func addMessage(content: String) {
+    guard let nickName = UserDefaults.standard.string(forKey: UserReference.nickName) else { return }
     
     firestore
       .collection(FirebaseReference.chat)

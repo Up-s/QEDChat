@@ -67,8 +67,11 @@ extension SignInViewController: SignInViewDelegate {
       return
     }
     
+    presentIndicatorViewController()
     pSign.signIn(email: email, password: password) { [weak self] result in
       guard let self = self else { return }
+      
+      self.dismissIndicatorViewController()
       
       switch result {
       case .failure(.firebase(let error)):
