@@ -11,8 +11,8 @@ import Firebase
 
 class SignProvider {
   
-  let firestore = Firestore.firestore()
-  let auth = Auth.auth()
+  private let firestore = Firestore.firestore()
+  private let auth = Auth.auth()
   
   func signIn(email: String, password: String, completion: @escaping (Result<String, FirebaseError>) -> Void) {
     auth.signIn(withEmail: email, password: password) { (result, error) in
@@ -21,7 +21,7 @@ class SignProvider {
         
       } else {
         guard let user = result?.user else {
-          completion(.failure(.notice("Result Nill")))
+          completion(.failure(.notice("Result Error")))
           return
         }
         
@@ -61,7 +61,7 @@ class SignProvider {
         
       } else {
         guard let user = result?.user else {
-          completion(.failure(.notice("Result Nill")))
+          completion(.failure(.notice("Result Error")))
           return
         }
         

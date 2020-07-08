@@ -19,4 +19,3 @@ struct MessageReference {
   static let content = "Content"
   static let date = "Date"
 }
-

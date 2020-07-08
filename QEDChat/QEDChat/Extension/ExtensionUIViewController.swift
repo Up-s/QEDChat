@@ -11,6 +11,7 @@ import UIKit
 extension UIViewController {
   
   // MARK: - AlertController
+  
   func alertNormal(title: String? = nil, message: String? = nil, handler: ((UIAlertAction) -> Void)? = nil) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let cancel = UIAlertAction(title: "닫기", style: .cancel, handler: handler)
@@ -36,6 +37,7 @@ extension UIViewController {
   
   
   // MARK: - IndicatoerViewController
+  
   func presentIndicatorViewController() {
     let vcIndicator = IndicatorViewController()
     vcIndicator.modalPresentationStyle = .overFullScreen

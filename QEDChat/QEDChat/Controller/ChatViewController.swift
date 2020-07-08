@@ -59,7 +59,12 @@ extension ChatViewController {
   @objc private func signOutBarButtonDidTap() {
     do {
       try pSign.signOut()
+      
+      UserDefaults.standard.removeObject(forKey: UserReference.email)
+      UserDefaults.standard.removeObject(forKey: UserReference.nickName)
+      
       pChat.out()
+      
       WindowManager.set(.sign)
       
     } catch {
