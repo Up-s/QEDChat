@@ -72,15 +72,18 @@ class SignInView: UIView {
       self.addSubview($0)
       $0.translatesAutoresizingMaskIntoConstraints = false
       
-      if let _ = $0 as? UITextField {
+      switch $0 {
+      case is UITextField:
         $0.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         $0.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-      }
-      
-      if let _ = $0 as? UIButton {
+        
+      case is UIButton:
         $0.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         $0.widthAnchor.constraint(equalToConstant: 120).isActive = true
         $0.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+      default:
+        break
       }
     }
     

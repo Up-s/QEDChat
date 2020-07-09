@@ -11,7 +11,6 @@ import UIKit
 class ChatViewController: UIViewController {
   
   private let pChat = ChatProvider()
-  private let pSign = SignProvider()
   
   private let messageTableView = UITableView()
   private let messageTextField = UITextField()
@@ -60,7 +59,7 @@ extension ChatViewController {
   
   @objc private func signOutBarButtonDidTap() {
     do {
-      try pSign.signOut()
+      try SignProvider().signOut()
       
       UserDefaults.standard.removeObject(forKey: UserReference.email)
       UserDefaults.standard.removeObject(forKey: UserReference.nickName)
@@ -128,18 +127,22 @@ extension ChatViewController {
       else { return }
     let height = keyboardFrame.cgRectValue.height - view.safeAreaInsets.bottom
     
-    UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
-      switch notification.name {
-      case UIResponder.keyboardWillShowNotification:
-        self.bottomViewConstraint?.constant = -height
-        
-      case UIResponder.keyboardWillHideNotification:
-        self.bottomViewConstraint?.constant = 0
-        
-      default:
-        break
-      }
-      self.view.layoutIfNeeded()
+    UIView.animate(
+      withDuration: duration,
+      delay: 0,
+      options: UIView.AnimationOptions(rawValue: curve),
+      animations: { [weak self] in
+        switch notification.name {
+        case UIResponder.keyboardWillShowNotification:
+          self?.bottomViewConstraint?.constant = -height
+          
+        case UIResponder.keyboardWillHideNotification:
+          self?.bottomViewConstraint?.constant = 0
+          
+        default:
+          break
+        }
+        self?.view.layoutIfNeeded()
     })
     
     tableViewBottomScroll()

@@ -32,12 +32,9 @@ class ChatProvider {
           completion(.failure(.firebase(error)))
           
         } else {
-          guard
-            let self = self,
-            let documents = snapshot?.documents
-            else {
-              completion(.failure(.notice("Snapshot Error")))
-              return
+          guard let self = self, let documents = snapshot?.documents else {
+            completion(.failure(.notice("Snapshot Error")))
+            return
           }
           
           var tempMessages = [MessageModel]()

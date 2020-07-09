@@ -10,8 +10,6 @@ import UIKit
 
 class SignUpViewController: UIViewController {
   
-  private let pSign = SignProvider()
-  
   private let vSignUp = SignUpView()
   
   override func viewDidLoad() {
@@ -75,7 +73,8 @@ extension SignUpViewController: SignUpViewViewDelegate {
     }
     
     presentIndicatorViewController()
-    pSign.signUp(email: email, password: password, nickName: nickName) { [weak self] (result) in
+    
+    SignProvider().signUp(email: email, password: password, nickName: nickName) { [weak self] (result) in
       guard let self = self else { return }
       
       self.dismissIndicatorViewController()
