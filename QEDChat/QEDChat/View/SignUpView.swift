@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SignUpViewViewDelegate: class {
+protocol SignUpViewViewDelegate: AnyObject {
   func signUpButtonDidTap(emailTF: UITextField, passwordTF: UITextField, nickNameTF: UITextField)
 }
 

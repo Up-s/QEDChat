@@ -12,7 +12,7 @@
 		4FE0BA282499CC0800F69439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0BA272499CC0800F69439 /* AppDelegate.swift */; };
 		4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA302499CC0900F69439 /* Assets.xcassets */; };
 		4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */; };
-		4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */; };
+		4FEE4FB526919AF400839F01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FEE4FB426919AF400839F01 /* GoogleService-Info.plist */; };
 		4FFD2F722499D0BD008554D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F712499D0BD008554D7 /* SignInViewController.swift */; };
 		4FFD2F742499D0C4008554D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */; };
 		4FFD2F762499D111008554D7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD2F752499D111008554D7 /* SignInView.swift */; };
@@ -36,7 +36,7 @@
 		4FE0BA302499CC0900F69439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE0BA332499CC0900F69439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE0BA352499CC0900F69439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FEE4FB426919AF400839F01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FFD2F712499D0BD008554D7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4FFD2F732499D0C4008554D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4FFD2F752499D111008554D7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 				4F5DBB6624B458FA00A196A2 /* Utill */,
 				4FE0BA302499CC0900F69439 /* Assets.xcassets */,
 				4FE0BA322499CC0900F69439 /* LaunchScreen.storyboard */,
+				4FEE4FB426919AF400839F01 /* GoogleService-Info.plist */,
 				4FE0BA352499CC0900F69439 /* Info.plist */,
-				4FFD2F6F2499CFE0008554D7 /* GoogleService-Info.plist */,
 			);
 			path = QEDChat;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Kira;
 				TargetAttributes = {
 					4FE0BA232499CC0800F69439 = {
@@ -241,8 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE0BA342499CC0900F69439 /* LaunchScreen.storyboard in Resources */,
-				4FFD2F702499CFE0008554D7 /* GoogleService-Info.plist in Resources */,
 				4FE0BA312499CC0900F69439 /* Assets.xcassets in Resources */,
+				4FEE4FB526919AF400839F01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +352,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -412,6 +413,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

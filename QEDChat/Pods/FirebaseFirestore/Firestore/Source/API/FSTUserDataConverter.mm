@@ -32,20 +32,20 @@
 #import "Firestore/Source/API/FIRGeoPoint+Internal.h"
 #import "Firestore/Source/API/converters.h"
 
-#include "Firestore/core/src/firebase/firestore/core/user_data.h"
-#include "Firestore/core/src/firebase/firestore/model/database_id.h"
-#include "Firestore/core/src/firebase/firestore/model/document_key.h"
-#include "Firestore/core/src/firebase/firestore/model/field_mask.h"
-#include "Firestore/core/src/firebase/firestore/model/field_path.h"
-#include "Firestore/core/src/firebase/firestore/model/field_transform.h"
-#include "Firestore/core/src/firebase/firestore/model/field_value.h"
-#include "Firestore/core/src/firebase/firestore/model/precondition.h"
-#include "Firestore/core/src/firebase/firestore/model/transform_operation.h"
-#include "Firestore/core/src/firebase/firestore/nanopb/nanopb_util.h"
-#include "Firestore/core/src/firebase/firestore/timestamp_internal.h"
-#include "Firestore/core/src/firebase/firestore/util/exception.h"
-#include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
-#include "Firestore/core/src/firebase/firestore/util/string_apple.h"
+#include "Firestore/core/src/core/user_data.h"
+#include "Firestore/core/src/model/database_id.h"
+#include "Firestore/core/src/model/document_key.h"
+#include "Firestore/core/src/model/field_mask.h"
+#include "Firestore/core/src/model/field_path.h"
+#include "Firestore/core/src/model/field_transform.h"
+#include "Firestore/core/src/model/field_value.h"
+#include "Firestore/core/src/model/precondition.h"
+#include "Firestore/core/src/model/transform_operation.h"
+#include "Firestore/core/src/nanopb/nanopb_util.h"
+#include "Firestore/core/src/timestamp_internal.h"
+#include "Firestore/core/src/util/exception.h"
+#include "Firestore/core/src/util/hard_assert.h"
+#include "Firestore/core/src/util/string_apple.h"
 #include "absl/memory/memory.h"
 #include "absl/strings/match.h"
 #include "absl/types/optional.h"
@@ -53,7 +53,6 @@
 namespace util = firebase::firestore::util;
 using firebase::Timestamp;
 using firebase::TimestampInternal;
-using firebase::firestore::GeoPoint;
 using firebase::firestore::core::ParseAccumulator;
 using firebase::firestore::core::ParseContext;
 using firebase::firestore::core::ParsedSetData;
@@ -64,11 +63,9 @@ using firebase::firestore::model::DatabaseId;
 using firebase::firestore::model::DocumentKey;
 using firebase::firestore::model::FieldMask;
 using firebase::firestore::model::FieldPath;
-using firebase::firestore::model::FieldTransform;
 using firebase::firestore::model::FieldValue;
 using firebase::firestore::model::NumericIncrementTransform;
 using firebase::firestore::model::ObjectValue;
-using firebase::firestore::model::Precondition;
 using firebase::firestore::model::ServerTimestampTransform;
 using firebase::firestore::model::TransformOperation;
 using firebase::firestore::nanopb::MakeByteString;
@@ -196,7 +193,7 @@ NS_ASSUME_NONNULL_BEGIN
   __block ParseContext context = accumulator.RootContext();
   __block ObjectValue updateData = ObjectValue::Empty();
 
-  [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+  [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *) {
     FieldPath path;
 
     if ([key isKindOfClass:[NSString class]]) {
@@ -295,7 +292,7 @@ NS_ASSUME_NONNULL_BEGIN
   } else {
     __block ObjectValue result = ObjectValue::Empty();
 
-    [dict enumerateKeysAndObjectsUsingBlock:^(NSString *key, id value, BOOL *stop) {
+    [dict enumerateKeysAndObjectsUsingBlock:^(NSString *key, id value, BOOL *) {
       absl::optional<FieldValue> parsedValue =
           [self parseData:value context:context.ChildContext(util::MakeString(key))];
       if (parsedValue) {
@@ -312,7 +309,7 @@ NS_ASSUME_NONNULL_BEGIN
   __block FieldValue::Array result;
   result.reserve(array.count);
 
-  [array enumerateObjectsUsingBlock:^(id entry, NSUInteger idx, BOOL *stop) {
+  [array enumerateObjectsUsingBlock:^(id entry, NSUInteger idx, BOOL *) {
     absl::optional<FieldValue> parsedEntry = [self parseData:entry
                                                      context:context.ChildContext(idx)];
     if (!parsedEntry) {
@@ -345,7 +342,7 @@ NS_ASSUME_NONNULL_BEGIN
       context.AddToFieldMask(*context.path());
 
     } else if (context.data_source() == UserDataSource::Update) {
-      HARD_ASSERT(context.path()->size() > 0,
+      HARD_ASSERT(!context.path()->empty(),
                   "FieldValue.delete() at the top level should have already been handled.");
       ThrowInvalidArgument("FieldValue.delete() can only appear at the top level of your "
                            "update data%s",
@@ -511,7 +508,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     absl::optional<FieldValue> parsedElement = [self parseData:element
                                                        context:context.ChildContext(i)];
-    HARD_ASSERT(parsedElement && accumulator.field_transforms().size() == 0,
+    HARD_ASSERT(parsedElement && accumulator.field_transforms().empty(),
                 "Failed to properly parse array transform element: %s", element);
     values.push_back(*parsedElement);
   }

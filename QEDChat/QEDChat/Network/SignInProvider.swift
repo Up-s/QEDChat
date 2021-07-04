@@ -11,21 +11,19 @@ import Firebase
 
 class SignProvider {
   
-  private let firestore = Firestore.firestore()
-  private let auth = Auth.auth()
-  
   func signIn(email: String, password: String, completion: @escaping (Result<String, FirebaseError>) -> Void) {
-    auth.signIn(withEmail: email, password: password) { [weak self] (result, error) in
+    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
       if let error = error {
         completion(.failure(.firebase(error)))
         
       } else {
-        guard let self = self, let user = result?.user else {
+        guard let user = result?.user else {
           completion(.failure(.notice("Result Error")))
           return
         }
         
-        self.firestore
+        Firestore
+          .firestore()
           .collection(FirebaseReference.user)
           .document(user.uid)
           .getDocument { (snapshot, error) in
@@ -55,17 +53,18 @@ class SignProvider {
   
   
   func signUp(email: String, password: String, nickName: String, completion: @escaping (Result<String, FirebaseError>) -> Void) {
-    auth.createUser(withEmail: email, password: password) { [weak self] (result, error) in
+    Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
       if let error = error {
         completion(.failure(.firebase(error)))
         
       } else {
-        guard let self = self, let user = result?.user else {
+        guard let user = result?.user else {
           completion(.failure(.notice("Result Error")))
           return
         }
         
-        self.firestore
+        Firestore
+          .firestore()
           .collection(FirebaseReference.user)
           .document(user.uid)
           .setData([
@@ -86,7 +85,7 @@ class SignProvider {
   
   
   func signOut() throws {
-    try auth.signOut()
+    try Auth.auth().signOut()
   }
 }
 

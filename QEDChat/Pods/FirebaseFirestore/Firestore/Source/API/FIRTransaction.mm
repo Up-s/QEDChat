@@ -26,14 +26,14 @@
 #import "Firestore/Source/API/FIRTransaction+Internal.h"
 #import "Firestore/Source/API/FSTUserDataConverter.h"
 
-#include "Firestore/core/src/firebase/firestore/core/transaction.h"
-#include "Firestore/core/src/firebase/firestore/core/user_data.h"
-#include "Firestore/core/src/firebase/firestore/model/document.h"
-#include "Firestore/core/src/firebase/firestore/util/error_apple.h"
-#include "Firestore/core/src/firebase/firestore/util/exception.h"
-#include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
-#include "Firestore/core/src/firebase/firestore/util/status.h"
-#include "Firestore/core/src/firebase/firestore/util/statusor.h"
+#include "Firestore/core/src/core/transaction.h"
+#include "Firestore/core/src/core/user_data.h"
+#include "Firestore/core/src/model/document.h"
+#include "Firestore/core/src/util/error_apple.h"
+#include "Firestore/core/src/util/exception.h"
+#include "Firestore/core/src/util/hard_assert.h"
+#include "Firestore/core/src/util/status.h"
+#include "Firestore/core/src/util/statusor.h"
 
 using firebase::firestore::core::ParsedSetData;
 using firebase::firestore::core::ParsedUpdateData;
@@ -41,7 +41,6 @@ using firebase::firestore::core::Transaction;
 using firebase::firestore::model::Document;
 using firebase::firestore::model::MaybeDocument;
 using firebase::firestore::util::MakeNSError;
-using firebase::firestore::util::Status;
 using firebase::firestore::util::StatusOr;
 using firebase::firestore::util::ThrowInvalidArgument;
 
@@ -178,7 +177,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)validateReference:(FIRDocumentReference *)reference {
   if (reference.firestore != self.firestore) {
-    ThrowInvalidArgument("Provided document reference is from a different Firestore instance.");
+    ThrowInvalidArgument("Provided document reference is from a different Cloud Firestore "
+                         "instance.");
   }
 }
 
